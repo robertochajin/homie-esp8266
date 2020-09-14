@@ -315,18 +315,18 @@ ConfigValidationResult Validation::_validateConfigMqtt(const JsonObject object) 
         JsonVariant mqttUsername = mqtt["username"];
         JsonVariant mqttPassword = mqtt["password"];
 
-        if (!mqttUsername.as<const char*>()) {
-          result.reason = F("mqtt.username is not a string");
-          return result;
-        }
+        // if (!mqttUsername.as<const char*>()) {
+        //   result.reason = F("mqtt.username is not a string");
+        //   return result;
+        // }
         if (strlen(mqttUsername.as<const char*>()) + 1 > MAX_MQTT_CREDS_LENGTH) {
           result.reason = F("mqtt.username is too long");
           return result;
         }
-        if (!mqttPassword.as<const char*>()) {
-          result.reason = F("mqtt.password is not a string");
-          return result;
-        }
+        // if (!mqttPassword.as<const char*>()) {
+        //   result.reason = F("mqtt.password is not a string");
+        //   return result;
+        // }
         if (strlen(mqttPassword.as<const char*>()) + 1 > MAX_MQTT_CREDS_LENGTH) {
           result.reason = F("mqtt.password is too long");
           return result;
