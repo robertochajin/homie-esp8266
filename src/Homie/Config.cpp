@@ -70,8 +70,11 @@ bool Config::load() {
   const char* reqWifiSsid = reqWifi["ssid"];
   const char* reqMqttHost = reqMqtt["host"];
 
+  const char* reqDeviceId = parsedJson["device_id"];
+  const char* reqDeviceKey = parsedJson["device_key"];
+  const char* reqChannelId = parsedJson["channel_id"];
+
   /* Optional config items */
-  const char* reqDeviceId = parsedJson["device_id"] | DeviceId::get();
   uint16_t regDeviceStatsInterval = parsedJson["device_stats_interval"] | STATS_SEND_INTERVAL_SEC;
   bool reqOtaEnabled = parsedJson["ota"]["enabled"] | false;
 
@@ -94,6 +97,8 @@ bool Config::load() {
 
   strlcpy(_configStruct.name, reqName, MAX_FRIENDLY_NAME_LENGTH);
   strlcpy(_configStruct.deviceId, reqDeviceId, MAX_DEVICE_ID_LENGTH);
+  strlcpy(_configStruct.deviceKey, reqDeviceKey, MAX_DEVICE_KEY_LENGTH);
+  strlcpy(_configStruct.channelId, reqChannelId, MAX_CHANNEL_ID_LENGTH);
   _configStruct.deviceStatsInterval = regDeviceStatsInterval;
   strlcpy(_configStruct.wifi.ssid, reqWifiSsid, MAX_WIFI_SSID_LENGTH);
   if (reqWifiPassword) strlcpy(_configStruct.wifi.password, reqWifiPassword, MAX_WIFI_PASSWORD_LENGTH);

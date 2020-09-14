@@ -24,7 +24,9 @@ namespace HomieInternals {
   const uint8_t MAX_MQTT_TOPIC_LENGTH = 128 + 1;
 
   const uint8_t MAX_FRIENDLY_NAME_LENGTH = 64 + 1;
-  const uint8_t MAX_DEVICE_ID_LENGTH = 32 + 1;
+  const uint8_t MAX_DEVICE_ID_LENGTH = 48 + 1;
+  const uint8_t MAX_DEVICE_KEY_LENGTH = 48 + 1;
+  const uint8_t MAX_CHANNEL_ID_LENGTH = 128 + 1;
 
   const uint8_t MAX_BRAND_LENGTH = MAX_WIFI_SSID_LENGTH - 10 - 1;
   const uint8_t MAX_FIRMWARE_NAME_LENGTH = 32 + 1;

@@ -7,6 +7,8 @@ namespace HomieInternals {
 struct ConfigStruct {
   char name[MAX_FRIENDLY_NAME_LENGTH];
   char deviceId[MAX_DEVICE_ID_LENGTH];
+  char deviceKey[MAX_DEVICE_KEY_LENGTH];
+  char channelId[MAX_CHANNEL_ID_LENGTH];
   uint16_t deviceStatsInterval;
 
   struct WiFi {
