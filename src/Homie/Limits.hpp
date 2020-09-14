@@ -19,8 +19,8 @@ namespace HomieInternals {
   const uint8_t MAX_FINGERPRINT_SIZE = 20;
   const uint8_t MAX_FINGERPRINT_STRING_LENGTH = (MAX_FINGERPRINT_SIZE *2) + 1;
 
-  const uint8_t MAX_MQTT_CREDS_LENGTH = 32 + 1;
-  const uint8_t MAX_MQTT_BASE_TOPIC_LENGTH = 48 + 1;
+  const uint8_t MAX_MQTT_CREDS_LENGTH = 48 + 1;
+  const uint8_t MAX_MQTT_BASE_TOPIC_LENGTH = 128 + 1;
   const uint8_t MAX_MQTT_TOPIC_LENGTH = 128 + 1;
 
   const uint8_t MAX_FRIENDLY_NAME_LENGTH = 64 + 1;
